@@ -101,3 +101,20 @@ body {
 .key:active, .key-wide:active, .read-btn:active, .clear-btn:active { 
     background-color: #ddd; 
 }
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .keyboard { gap: 4px; }
+    
+    .key, .key-wide {
+        padding: 8px 5px; /* Shrink padding to save vertical space */
+        font-size: 1rem;   /* Slightly smaller text */
+    }
+    
+    #output-display {
+        font-size: 1.5rem;
+        padding: 8px;
+        min-height: 40px;
+    }
+    
+    .top-bar { margin-bottom: 10px; }
+}
