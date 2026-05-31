@@ -1,0 +1,103 @@
+/* --- Theme Variables --- */
+:root {
+    /* Default Theme */
+    --bg-color: #fdfbf7;
+    --key-bg: #f9f9f9;
+    --key-border: #333;
+    --text-color: #000;
+    --clear-btn-bg: #f8d7da;
+    --read-btn-bg: #d1e7dd;
+}
+
+/* Theme definitions */
+[data-theme="high-contrast"] {--bg-color: #000;--key-bg: #ff0;--key-border: #fff;--text-color: #000;--clear-btn-bg: #ff6666;--read-btn-bg: #66ff66;}
+[data-theme="ocean"] { --bg-color: #e0f7fa; --key-bg: #80deea; --key-border: #006064; }
+[data-theme="sunset"] { --bg-color: #fff3e0; --key-bg: #ffcc80; --key-border: #e65100; }
+[data-theme="forest"] { --bg-color: #e8f5e9; --key-bg: #a5d6a7; --key-border: #1b5e20; }
+[data-theme="lavender"] { --bg-color: #f3e5f5; --key-bg: #ce93d8; --key-border: #4a148c; }
+[data-theme="slate"] { --bg-color: #eceff1; --key-bg: #cfd8dc; --key-border: #263238; }
+[data-theme="berry"] { --bg-color: #fce4ec; --key-bg: #f48fb1; --key-border: #880e4f; }
+[data-theme="monochrome"] { --bg-color: #fff; --key-bg: #eee; --key-border: #333; }
+[data-theme="neon"] { --bg-color: #1a1a1a; --key-bg: #333; --key-border: #0ff; --text-color: #0ff; }
+
+#theme-selector {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* --- Layout --- */
+body { 
+    font-family: sans-serif; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+.top-bar { 
+    display: flex; 
+    gap: 10px; 
+    width: 100%; 
+    max-width: 800px; 
+    margin-bottom: 20px; 
+}
+
+#output-display { 
+    flex-grow: 1; 
+    min-height: 50px; 
+    border: 2px solid var(--key-border); 
+    padding: 15px; 
+    font-size: 2rem; 
+    background-color: white;
+    color: #000;
+    white-space: pre-wrap; /* Ensures spaces are visible */
+}
+
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* --- Buttons --- */
+.key, .key-wide, .read-btn, .clear-btn, .theme-btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid var(--key-border);
+    background-color: var(--key-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+.key { flex: 1; }
+.key-wide { flex: 3; }
+
+.read-btn { background-color: var(--read-btn-bg); }
+.clear-btn { background-color: var(--clear-btn-bg); }
+
+.keyboard { 
+    width: 100%; 
+    max-width: 800px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.row { 
+    display: flex; 
+    justify-content: center; 
+    gap: 8px; 
+}
+
+.key:active, .key-wide:active, .read-btn:active, .clear-btn:active { 
+    background-color: #ddd; 
+}
