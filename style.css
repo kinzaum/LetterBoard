@@ -103,6 +103,26 @@ body {
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
+<<<<<<< HEAD
+    /* Reduce body padding so the whole board uses more edge-to-edge space */
+    body { padding: 5px; }
+    
+    /* Shrink the gap between rows significantly */
+    .keyboard { gap: 2px; }
+    .row { gap: 4px; }
+    
+    /* Make the keys smaller to fit the height */
+    .key, .key-wide {
+        padding: 4px 2px;
+        font-size: 0.9rem;
+    }
+    
+    /* Shrink the top bar components */
+    .top-bar { margin-bottom: 5px; }
+    #output-display { font-size: 1.2rem; padding: 5px; min-height: 35px; }
+    .read-btn, .clear-btn, #theme-selector { font-size: 0.9rem; padding: 5px 10px; }
+}
+=======
     .keyboard { gap: 4px; }
     
     .key, .key-wide {
@@ -118,3 +138,4 @@ body {
     
     .top-bar { margin-bottom: 10px; }
 }
+>>>>>>> 0a91bf6dc3fa93b2eb91c74110d8a2162527672a
