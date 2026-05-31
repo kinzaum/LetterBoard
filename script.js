@@ -43,13 +43,16 @@ function readFullSentence() {
 
 function setTheme(themeName) {
     document.body.setAttribute('data-theme', themeName);
-    localStorage.setItem('selectedTheme', themeName); // Save for later
+    localStorage.setItem('selectedTheme', themeName); 
 }
 
 // Unified speech function
 function speakText(text) {
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
+
+    const textToSay = (text.length === 1) ? text.toLowerCase() : text;
+    
+    const utterance = new SpeechSynthesisUtterance(textToSay);
     utterance.rate = 0.7;
     window.speechSynthesis.speak(utterance);
 }
